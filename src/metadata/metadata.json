@@ -1,0 +1,93 @@
+{
+  "package": "Pexels",
+  "tagline": "Pexels API",
+  "description": "Best free stock photos in one place",
+  "image": "https://logo.clearbit.com/pexels.com?s=128",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Pexels-Package",
+  "keywords": [
+    "photo"
+  ],
+  "accounts": {
+    "domain": "pexels.com",
+    "credentials": [
+      "apiKey"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "searchPhotos",
+      "description": "Search Photos",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api KEY",
+          "required": true
+        },
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Query to search",
+          "required": true
+        },
+        {
+          "name": "perPage",
+          "type": "Number",
+          "info": "Photos data per page",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "Number",
+          "info": "Page number. For pagination",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getPopularPhotos",
+      "description": "Get list of popular photos",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api KEY",
+          "required": true
+        },
+        {
+          "name": "perPage",
+          "type": "Number",
+          "info": "Photos data per page",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "Number",
+          "info": "Page number. For pagination",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    }
+  ]
+}
+
